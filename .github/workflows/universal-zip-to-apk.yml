@@ -33,7 +33,7 @@ jobs:
       zip_file: ${{ steps.zip.outputs.zip_file }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Locate ZIP
         id: zip
@@ -115,7 +115,7 @@ jobs:
         - /opt/ghc:/host/ghc
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Free disk space on the runner host
         shell: bash
@@ -646,7 +646,7 @@ jobs:
     timeout-minutes: 40
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Extract ZIP and locate Flutter project
         shell: bash
@@ -736,7 +736,7 @@ jobs:
     timeout-minutes: 40
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Extract ZIP and locate Gradle project
         shell: bash

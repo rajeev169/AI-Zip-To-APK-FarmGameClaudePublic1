@@ -1,0 +1,11 @@
+# Keeps the GitHub Actions in the workflow up to date automatically.
+# Once a week Dependabot checks for new versions (for example when GitHub moves
+# to a newer Node.js) and opens a pull request; merge it to update.
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "ci"

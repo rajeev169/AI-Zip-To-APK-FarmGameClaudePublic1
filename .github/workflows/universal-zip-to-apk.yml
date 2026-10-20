@@ -631,7 +631,7 @@ jobs:
           keytool -printcert -jarfile build/Game-debug.apk | grep -E "Owner|SHA256" || true
 
       - name: Upload Godot APK
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: Android-APK-Godot
           path: ${{ steps.project.outputs.dir }}/build/Game-debug.apk
@@ -721,7 +721,7 @@ jobs:
           "$BT/apksigner" verify --print-certs "$APK" | grep -E "certificate (DN|SHA-256 digest)" || true
 
       - name: Upload Flutter APK
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: Android-APK-Flutter
           path: ${{ env.FLUTTER_DIR }}/build/app/outputs/flutter-apk/app-debug.apk
@@ -832,7 +832,7 @@ jobs:
           "$BT/apksigner" verify --print-certs "$APK" | grep -E "certificate (DN|SHA-256 digest)" || true
 
       - name: Upload Android APK
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: Android-APK-Gradle
           path: ${{ steps.apk.outputs.path }}
